@@ -220,5 +220,14 @@ ciphertext_bin = "11001010111011011010001001100101010111111011011100111000011100
 key = "LOVECSND"
 
 # Decrypt and print
+print("Here we have the ciphertext and the key:")
+print("Ciphertext:", ciphertext_bin)
+print("Key:", key)
+print("\n")
+
+key_bin = ''.join(f"{ord(c):08b}" for c in key)
+print("First we convert the key to binary: ", key_bin)
+print("\n")
+
 plaintext = des_decrypt(ciphertext_bin, key)
 print("\nDecrypted Text:", plaintext)
